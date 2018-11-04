@@ -1,0 +1,11 @@
+apkpatch -f <new> -t <old> -o <output> -k <keystore> -p <***> -a <alias> -e <***>
+
+-f : 新版本apk
+-t : 有bug的旧版本apk
+-o : 生成的补丁文件所放的文件夹
+-k : 签名打包密钥
+-p ：签名打包密钥密码
+-a : 签名密钥别名
+-e : 签名别名密码（这里一般和密钥密码一致）
+
+apkpatch.bat -f new.apk -t old.apk -o d:/android/tool -k debug.keystore -p debug -a AndroidDebugKey -e debug
