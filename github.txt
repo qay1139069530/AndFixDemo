@@ -1,0 +1,38 @@
+github git cmd
+
+http://www.jianshu.com/p/8d26730386f3
+
+在你的电脑上装好git
+大致流程是：
+1、在github上创建项目
+2、使用git clone https://github.com/xxxxxxx/xxxxx.git克隆到本地
+3、编辑项目
+4、git add . （将改动添加到暂存区）
+5、git commit -m "提交说明"
+6、git push origin master 将本地更改推送到远程master分支。
+这样你就完成了向远程仓库的推送。
+
+https://github.com/qay1139069530/QBase.git
+
+下载jar 放到C:\Users\Qay\.gradle\caches\modules-2\files-2.1对应文件中
+在Terminal中执行 gradlew assemblerelease
+
+
+gradew install
+gradew bintrayUpload
+
+
+
+创建分区
+git branch test
+
+
+拉去github分区
+
+首先自己要与origin master建立连接：git remote add origin git@github.com:XXXX/nothing2.git
+
+我们需要：git fetch origin dev 命令来把远程分支拉到本地
+
+然后使用：git checkout -b dev origin/dev在本地创建分支dev并切换到该分支
+
+最后使用：git pull origin dev就可以把某个分支上的内容都拉取到本地了
