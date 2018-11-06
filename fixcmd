@@ -8,4 +8,6 @@ apkpatch -f <new> -t <old> -o <output> -k <keystore> -p <***> -a <alias> -e <***
 -a : 签名密钥别名
 -e : 签名别名密码（这里一般和密钥密码一致）
 
-apkpatch.bat -f new.apk -t old.apk -o d:/android/tool -k debug.keystore -p debug -a AndroidDebugKey -e debug
+apkpatch.bat -f new.apk -t old.apk -o d:/android/tool/apkpatch-1.0.3 -k keystore.jks -p 123456 -a keystore -e 123456
+
+apkpatch.bat -f new.apk -t old.apk -o e:/Study/tool/apkpatch-1.0.3/diff -k e:/Study/tool/apkpatch-1.0.3/keystore.jks -p 123456 -a keystore -e 123456

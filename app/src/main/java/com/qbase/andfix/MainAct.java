@@ -23,8 +23,7 @@ public class MainAct extends AppCompatActivity {
         findViewById(R.id.main_calucate).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Test test = new Test();
-                mTvResult.setText(" Result : " + test.getCalculateResult());
+                setText();
             }
         });
         findViewById(R.id.main_andfix).setOnClickListener(new View.OnClickListener() {
@@ -35,16 +34,23 @@ public class MainAct extends AppCompatActivity {
         });
     }
 
+    private void setText() {
+        Test test = new Test();
+//        String text = "有bug了--已经修复了";
+//        mTvResult.setText(text);
+        mTvResult.setText(" Result : " + test.getCalculateResult());
+    }
+
     /**
      * 修复
      */
     private void onAndFix() {
         try {
-            MyApp myApp = (MyApp) getApplication();
-            File file = new File(Environment.getExternalStorageDirectory(),"andfix.apatch");
+            File file = new File(Environment.getExternalStorageDirectory(), "andfix.apatch");
             if (file.exists()) {
                 Log.e("--", "发现 andfix.apatch");
-                myApp.mPatchManager.addPatch(file.getAbsolutePath());
+                MyApp.getInstance().mPatchManager.addPatch(file.getAbsolutePath());
+                Log.e("--", "andfix.apatch加载成功");
             }
         } catch (Exception e) {
             e.printStackTrace();
